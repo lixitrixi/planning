@@ -1,7 +1,11 @@
 [package]
-name = "dyn-goap"
+name = "planning"
+description = "A Rust library for Goal-Orientated Action Planning, supporting dynamic priority and cost."
 version = "0.1.0"
 edition = "2021"
+authors = ["Felix Leitner <felix@felixleitner.com>"]
+repository = "https://github.com/lixitrixi/planning"
+license = "MIT"
 
 [dependencies]
 pathfinding = "4.10.0"
