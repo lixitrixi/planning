@@ -1,7 +1,7 @@
 [package]
 name = "planning"
 description = "A library allowing the planning of minimal sequences of actions to achieve a goal state."
-version = "1.0.0"
+version = "1.0.1"
 edition = "2021"
 authors = ["Felix Leitner <felix@felixleitner.com>"]
 repository = "https://github.com/lixitrixi/planning"

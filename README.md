@@ -103,5 +103,5 @@ assert_eq!(plan, vec![MyAction::PickFlower; 5]);
 
 ```toml
 [dependencies]
-planning = { version = "1.0", features = ["bevy", "serde_json"] }
+planning = { version = "1.0", features = ["bevy", "serde"] }
 ```
