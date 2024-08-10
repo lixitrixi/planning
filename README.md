@@ -1,15 +1,21 @@
 # Planning
 
-A Rust library allowing the planning of minimal sequences of actions to achieve a given goal state.
+[![crates.io](https://img.shields.io/crates/v/planning.svg)](https://crates.io/crates/planning)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/lixitrixi/planning/.github%2Fworkflows%2Frust.yml)
 
-This crate is based on the work on Goal-Oriented Action-Planner (GOAP) by Jeff Orkin. It takes inspiration from tynril's [rgoap](https://github.com/tynril/rgoap) library, but offers dynamic goal priority and action costs as well as arbitrary state types. 
+A library allowing the planning of minimal sequences of actions to achieve given goal states.
+
+This crate is based on the work on Goal-Oriented Action-Planning (GOAP) by Jeff Orkin. It takes inspiration from tynril's [rgoap](https://github.com/tynril/rgoap) library, but offers dynamic goal priority and action costs as well as arbitrary state types.
+
+The main access point is the `Agent` type, which allows dynamic and extensible planning with
+multiple goals and actions, and complex dynamic interactions between them.
 
 ## Usage
 
-Add the crate as a dependency with `cargo add planning` or by adding the following lines to your `Cargo.toml`:
+Add the crate as a dependency with `cargo add planning`, or by adding the following lines to your `Cargo.toml`:
 ```toml
 [dependencies]
-planning = "0.1"
+planning = "1.0"
 ```
 
 Use the library like so:
@@ -90,9 +96,12 @@ assert_eq!(plan, vec![MyAction::PickFlower; 5]);
 
 ## Features
 
-If the `bevy` feature is enabled, the `Agent` type will implement Bevy's `Component` type. This allows it to be used as part of a game engine for unit AI behavior:
+`bevy`: `Agent` implements Bevy's `Component` type. This is useful when using it as part of a game's AI unit behavior.
+
+`serde`: `Agent` implements `Serialize` and `Deserialize`.
+
 
 ```toml
 [dependencies]
-planning = { version = "0.1", features = ["bevy"] }
+planning = { version = "1.0", features = ["bevy", "serde_json"] }
 ```
