@@ -1,3 +1,7 @@
+> This repository is currently passively maintained, meaning no new features will be added. I will still respond to issues and bug reports!
+> 
+> I am intending to add support for more general planning constructs in the future, but currently this crate is mostly suited for game development. PRs and other contributions are welcome!
+
 # Planning
 
 [![crates.io](https://img.shields.io/crates/v/planning.svg)](https://crates.io/crates/planning)
